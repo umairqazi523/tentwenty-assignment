@@ -31,6 +31,31 @@ Follow the steps below to set up the project on your local machine:
    npm install
    ```
 
+## Folder Structure
+
+The project follows a specific folder structure, as outlined below:
+
+```
+├── src
+│   ├── assets
+│   │   ├── js
+│   │   │   ├── ...    # JavaScript files
+│   │   │   └── ...
+│   │   └── styles
+│   │       ├── ...    # Stylesheets
+│   │       └── ...
+│   ├── ...            # Other project files
+│   └── ...
+└── ...
+```
+
+The main source files are located in the `src` directory. Within the `src` directory, you will find an `assets` folder which contains two sub-folders: `js` and `styles`.
+
+- The `js` folder is intended for JavaScript files. You can place your JavaScript source files in this directory.
+- The `styles` folder is intended for stylesheets. You can place your CSS or SCSS files in this directory.
+
+Feel free to organize your files within these folders as per your project requirements.
+
 ## Development
 
 During development, the project uses Webpack to bundle the source files and provide live reloading for an efficient development workflow.
@@ -57,4 +82,4 @@ The production build will be available in the `dist` directory.
 
 ## Conclusion
 
-You are now set up with the project's development environment. With Node.js version 16, Webpack for development and production builds, you can efficiently develop and build the project according to your requirements. Happy coding!
+You are now set up with the project's development environment. With Node.js version 16, Webpack for development and production builds, and the defined folder structure, you can efficiently develop and build the project according to your requirements. Happy coding!
