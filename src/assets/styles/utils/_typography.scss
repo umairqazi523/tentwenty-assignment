@@ -1,0 +1,23 @@
+.btn {
+    display: inline-flex;
+    vertical-align: top;
+    align-items: center;
+    padding: 10px 11px 8px 15px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: $gray-100;
+
+    &-outline-black {
+        border: 1px solid $black;
+    }
+
+    &--has-icon {
+        svg {
+            margin-left: 13px;
+
+            @include sm {
+                margin-left: 28px;
+            }
+        }
+    }
+}

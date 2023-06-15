@@ -1,0 +1,25 @@
+// Fonts
+@import 'utils/fonts';
+
+// Reset
+@import 'utils/reset';
+
+// Utilities
+@import 'utils/variables';
+@import 'utils/mixins';
+
+// Vendors
+
+@import 'swiper/swiper-bundle.css';
+
+// Generic
+@import 'utils/typography';
+@import 'utils/generic';
+
+// Layout
+@import 'layout/animations';
+@import 'layout/header';
+
+// Components
+@import 'components/hero';
+@import 'components/quality-products';

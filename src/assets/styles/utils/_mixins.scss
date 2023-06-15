@@ -1,0 +1,51 @@
+@mixin xl {
+    @media (max-width: #{$xl}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (max-width: #{$lg}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: #{$md}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: #{$sm}) {
+        @content;
+    }
+}
+
+
+@mixin not-last {
+    &:not(:last-child) {
+        @content
+    }
+}
+
+@mixin not-first {
+    &:not(:first-child) {
+        @content
+    }
+}
+
+@mixin object-fit($fit: fill, $position: null) {
+    -o-object-fit: $fit;
+    object-fit: $fit;
+
+    @if $position {
+        -o-object-position: $position;
+        object-position: $position;
+        font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+    }
+
+    @else {
+        font-family: 'object-fit: #{$fit}';
+    }
+}

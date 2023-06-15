@@ -1,0 +1,122 @@
+.site-header {
+    padding: 15px 24px 15px 28px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+
+    @include sm {
+        padding: 0;
+    }
+
+    .navbar {
+        padding: 32px 33px 32px 39px;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+
+        @include sm {
+            padding: 15px 24px 18px 28px;
+        }
+    }
+
+    .navbar-nav-wrapper {
+        margin-right: auto;
+
+        @include sm {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100%;
+            background-color: $white;
+            padding: 100px 24px;
+            transform: translateX(-100%);
+            transition: 0.3s all ease;
+        }
+
+        &.show {
+            @include sm {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+
+        @include sm {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-item {
+            display: flex;
+
+            @include not-last {
+                margin-right: 21px;
+
+                @include sm {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .nav-link {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.4;
+                vertical-align: top;
+            }
+        }
+    }
+
+    &__cta {
+        // margin-left: auto;
+        position: relative;
+        z-index: 3;
+    }
+
+    .navbar-toggler {
+        display: none;
+        margin-left: auto;
+        width: 48px;
+        height: 48px;
+        background: #F9F4EE;
+        border: none;
+        -webkit-appearance: none;
+        appearance: none;
+        box-shadow: none;
+        outline: none;
+        position: relative;
+        z-index: 3;
+
+        @include sm {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        svg {
+            line {
+                transition: 0.3s all ease;
+            }
+        }
+
+        &[aria-expanded="true"] {
+            .top-line {
+                transform: rotate(45deg) translate(3px, -3px);
+            }
+
+            .middle-line {
+                opacity: 0;
+            }
+
+            .bottom-line {
+                transform: rotate(-45deg) translate(-8px, -1px);
+            }
+        }
+    }
+}
